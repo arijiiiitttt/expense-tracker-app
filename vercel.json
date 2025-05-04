@@ -1,32 +1,58 @@
 {
-    "version": 2,
-    "routes": [
-      {
-        "src": "/",
-        "dest": "/root.html"
-      },
-      {
-        "src": "/login",
-        "dest": "/src/login.html"
-      },
-      {
-        "src": "/exp",
-        "dest": "/public/exp.html",
-        "headers": {
-          "Cache-Control": "no-store"
-        }
-      },
-      {
-        "src": "/script/script.js",
-        "dest": "/src/script/script.js"
-      },
-      {
-        "src": "/img/.*",
-        "dest": "/src/img/$1"
-      },
-      {
-        "src": "/public/exp.html",
-        "status": 404
+  "version": 2,
+  "routes": [
+   
+    {
+      "src": "/",
+      "dest": "/public/root.html",
+      "headers": {
+        "Cache-Control": "no-store"
       }
-    ]
-  }
+    },
+   
+    {
+      "src": "/login",
+      "dest": "/public/login.html",
+      "headers": {
+        "Cache-Control": "no-store"
+      }
+    },
+  
+    {
+      "src": "/exp",
+      "dest": "/public/exp.html",
+      "headers": {
+        "Cache-Control": "no-store"
+      }
+    },
+    
+    {
+      "src": "/src/(.*)",
+      "dest": "/public/src/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/script/(.*)",
+      "dest": "/public/script/$1"
+    },
+    
+    {
+      "src": "/public/(.*\\.html)",
+      "status": 404
+    }
+  ],
+  "rewrites": [
+   
+    {
+      "source": "/login",
+      "destination": "/public/login.html"
+    },
+    {
+      "source": "/exp",
+      "destination": "/public/exp.html"
+    }
+  ]
+}
