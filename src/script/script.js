@@ -96,8 +96,8 @@ function checkLoginStatus() {
 }
 
 // After successful login in your script.js:
-// localStorage.setItem('currentUser', JSON.stringify(user));
-// window.location.href = '/app';
+ localStorage.setItem('currentUser', JSON.stringify(user));
+ window.location.href = '/app';
 
 
   

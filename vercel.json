@@ -3,19 +3,23 @@
     "routes": [
       {
         "src": "/",
-        "dest": "src/root.html"
+        "dest": "/root.html"
       },
       {
-        "src": "/login.html",
-        "dest": "/src/Login/login.html"
+        "src": "/",
+        "dest": "/src/login/log.html"
       },
       {
-        "src": "/exp.html",
+        "src": "/app",
         "dest": "/public/exp.html"
       },
       {
         "src": "/assets/(.*)",
-        "dest": "/assets/$1"
+        "dest": "/public/assets/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/src/$1"
       }
     ]
   }
