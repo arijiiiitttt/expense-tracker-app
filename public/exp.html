@@ -333,7 +333,7 @@
             gap: 1rem;
             flex: 1;
         }
-
+        
         .transaction-icon {
             width: 2.5rem;
             height: 2.5rem;
@@ -344,7 +344,7 @@
             justify-content: center;
             color: var(--primary);
         }
-
+        
         .transaction-details {
             flex: 1;
         }
@@ -681,7 +681,7 @@
         </header>
 
         <div class="dashboard">
-            <!-- Balance Card -->
+            <!------ Balance Card ------->
             <div class="card balance-card">
                 <div class="card-header">
                     <h2 class="card-title">Current Balance</h2>
@@ -759,7 +759,7 @@
                     </div>
                 </div>
                 <ul class="transaction-list" id="transactionList">
-                    <!-- Transactions will be added here dynamically -->
+       <!------ Transactions will be added here dynamically ------->
                 </ul>
             </div>
         </div>
@@ -834,6 +834,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -1198,7 +1199,7 @@
             
             function formatCurrency(amount, short = false) {
                 if (short && amount >= 1000) {
-                    return '$' + (amount / 1000).toFixed(1) + 'k';
+                    return '' + (amount / 1000).toFixed(1) + 'k';
                 }
                 return '$' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
             }

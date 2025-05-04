@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/root.html"
+      },
+      {
+        "src": "/login.html",
+        "dest": "/src/login.html"
+      },
+      {
+        "src": "/exp.html",
+        "dest": "/public/exp.html"
+      },
+      {
+        "src": "/assets/(.*)",
+        "dest": "/assets/$1"
+      }
+    ]
+  }
