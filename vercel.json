@@ -6,20 +6,27 @@
         "dest": "/root.html"
       },
       {
-        "src": "/",
-        "dest": "/src/login/log.html"
+        "src": "/login",
+        "dest": "/src/login.html"
       },
       {
-        "src": "/app",
-        "dest": "/public/exp.html"
+        "src": "/exp",
+        "dest": "/public/exp.html",
+        "headers": {
+          "Cache-Control": "no-store"
+        }
       },
       {
-        "src": "/assets/(.*)",
-        "dest": "/public/assets/$1"
+        "src": "/script/script.js",
+        "dest": "/src/script/script.js"
       },
       {
-        "src": "/(.*)",
-        "dest": "/src/$1"
+        "src": "/img/.*",
+        "dest": "/src/img/$1"
+      },
+      {
+        "src": "/public/exp.html",
+        "status": 404
       }
     ]
   }

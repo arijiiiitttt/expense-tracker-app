@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if user is already logged in
-    checkLoginStatus();
+    // First check if user is already logged in
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (currentUser) {
+        window.location.href = '/public/exp.html';
+        return; // Stop execution if redirecting
+    }
     
     const sign_in_btn = document.querySelector("#sign-in-btn");
     const sign_up_btn = document.querySelector("#sign-up-btn");
@@ -76,28 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('currentUser', JSON.stringify(user));
             
             // Redirect to dashboard or home page
-            window.location.href = 'dashboard.html';
+            window.location.href = '/public/exp.html';
         } else {
             alert("Invalid username or password!");
         }
     });
-});
-
-function checkLoginStatus() {
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser) {
-        // User is logged in, redirect to dashboard
-        window.location.href = 'dashboard.html';
-    }
-}
-  // Redirect to /app if already logged in
-  if (localStorage.getItem('currentUser')) {
-    window.location.href = '/app';
-}
-
-// After successful login in your script.js:
- localStorage.setItem('currentUser', JSON.stringify(user));
- window.location.href = '/app';
-
-
-  
+})
