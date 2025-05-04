@@ -13,19 +13,19 @@
             // Route mapping
             const routes = {
                 '/': currentUser ? '/app' : '/login',
-                '/login': 'src/log.html',
-                '/app': '/public/expense-tracker/index.html'
+                '/login': 'src/Login/login.html',
+                '/app': '/public/exp.html'
             };
             
             // Check if user is trying to access a protected route
             if (currentPath === '/app' && !currentUser) {
-                window.location.href = '/login';
+                window.location.href = 'src/Login/login.html';
                 return;
             }
             
             // Check if logged-in user is trying to access login page
             if (currentPath === '/login' && currentUser) {
-                window.location.href = '/app';
+                window.location.href = 'src/Login/login.html';
                 return;
             }
             

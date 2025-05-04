@@ -3,11 +3,11 @@
     "routes": [
       {
         "src": "/",
-        "dest": "/root.html"
+        "dest": "src/root.html"
       },
       {
         "src": "/login.html",
-        "dest": "/src/login.html"
+        "dest": "/src/Login/login.html"
       },
       {
         "src": "/exp.html",
